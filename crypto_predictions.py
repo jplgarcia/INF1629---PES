@@ -7,6 +7,7 @@ import statsmodels.api as sm
 import itertools
 import sys
 from scipy.stats import boxcox
+import simplejson as json
 np.set_printoptions(threshold=sys.maxsize)
 
 def get_predictions(coin):
@@ -17,6 +18,7 @@ def get_predictions(coin):
     y = resample_df(df)
     pred_df = ARIMA_time_series_predicition(y,df)
     predicted_to_csv(pred_df,coin)
+    return predicted_to_json(pred_df, coin)
 
 
 def remove_columns(df):
@@ -63,6 +65,10 @@ def ARIMA_time_series_predicition(y,df):
 def predicted_to_csv(df,coin):
     df.to_csv('Predictions_'+ coin +'.csv')
 
+def predicted_to_json(df, coin):
+    d = df.to_dict(orient='records')
+    return d
+
 def plot_forecast(y,pred_uc,pred_ci):
     ax = y.plot(label='observed', figsize=(14, 7))
     pred_uc.predicted_mean.plot(ax=ax, label='Forecast')
@@ -72,6 +78,6 @@ def plot_forecast(y,pred_uc,pred_ci):
     plt.legend()
     plt.show()
 
-get_predictions('BTC')
-get_predictions('XRP')
-get_predictions('XMR')
+# get_predictions('BTC')
+# get_predictions('XRP')
+# get_predictions('XMR')
