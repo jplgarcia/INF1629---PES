@@ -20,10 +20,11 @@ def all_coins():
 def specific(coin=None):
     if coin is None:
         return jsonify({'error': 'coin not specified'}), 404
-    if coin != 'BTC' and coin != 'XRP' and coin != 'XMR':
+    coin_name = coin.upper()
+    if coin_name != 'BTC' and coin_name != 'XRP' and coin_name != 'XMR':
         return jsonify({'error': 'coin not implemented'}), 501
-    
-    result = get_predictions(coin)
+  
+    result = get_predictions(coin_name.upper())
     return jsonify(result), 200
 
 

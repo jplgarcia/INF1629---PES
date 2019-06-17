@@ -56,7 +56,7 @@ def ARIMA_time_series_predicition(y,df):
 
     mod = sm.tsa.statespace.SARIMAX(y,order=(0, 1, 1),seasonal_order=(1, 1, 1, 12),enforce_stationarity=False,enforce_invertibility=False)
     results = mod.fit()
-    print(results.summary().tables[1])
+    # print(results.summary().tables[1])
     pred_uc = results.get_forecast(steps=100)
     pred_ci = pred_uc.conf_int()
     pred_ci['predicted_value'] = (pred_ci['lower close'] + pred_ci['upper close']) / 2  # assigned to a column
