@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarViewController = TabBarViewController()
         
-        window!.rootViewController = tabBarViewController
+        let navController = UINavigationController(rootViewController: tabBarViewController)
+        
+        window!.rootViewController = navController
         
         window!.makeKeyAndVisible()
         

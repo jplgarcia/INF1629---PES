@@ -9,7 +9,23 @@
 import UIKit
 
 class PredictionViewController: UIViewController {
+    
+    init(coinName: String) {
+        
+        super.init(nibName: "PredictionViewController", bundle: nil)
+        
+        title = coinName
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -24,6 +24,20 @@ class MarketTableViewCell: UITableViewCell {
         
         backgroundViewCell.layer.cornerRadius = 5.0
         
+        self.selectionStyle = .none
+    }
+    
+    func setup(coin: Coin) {
+        
+        coinImageView.image = UIImage(named: coin.imageView)
+        
+        coinInitials.text = coin.initials
+        
+        coinName.text = coin.name
+        
+        coinValue.text = coin.value
+        
+        coinPercentage.text = coin.percentage
     }
 
 }

@@ -21,18 +21,15 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let predictionViewController = PredictionViewController()
-        
+
         let walletViewController = WalletViewController()
         
         let marketViewController = MarketViewController()
         
-        self.viewControllers = [walletViewController, marketViewController, predictionViewController]
+        self.viewControllers = [marketViewController, walletViewController]
         
-        predictionViewController.tabBarItem = UITabBarItem(title: "Previsão", image: UIImage(named: ""), tag: 1)
-        walletViewController.tabBarItem = UITabBarItem(title: "Carteira", image: UIImage(named: ""), tag: 2)
-        marketViewController.tabBarItem = UITabBarItem(title: "Mercado", image: UIImage(named: ""), tag: 3)
+        walletViewController.tabBarItem = UITabBarItem(title: "Carteira", image: UIImage(named: ""), tag: 1)
+        marketViewController.tabBarItem = UITabBarItem(title: "Mercado", image: UIImage(named: ""), tag: 2)
         
         self.configureTabBarController()
     }

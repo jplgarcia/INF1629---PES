@@ -17,6 +17,8 @@
 		40BAE7AB22B9C82E0024D2B3 /* MarketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BAE7A922B9C82E0024D2B3 /* MarketViewController.xib */; };
 		40BAE7B022B9DC310024D2B3 /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE7AE22B9DC310024D2B3 /* MarketTableViewCell.swift */; };
 		40BAE7B122B9DC310024D2B3 /* MarketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BAE7AF22B9DC310024D2B3 /* MarketTableViewCell.xib */; };
+		40BAE7B522BAB9C40024D2B3 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE7B422BAB9C40024D2B3 /* Coin.swift */; };
+		40BAE7B922BABD760024D2B3 /* MarketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAE7B822BABD760024D2B3 /* MarketController.swift */; };
 		9C50027E22A930F5008AE561 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50027D22A930F5008AE561 /* AppDelegate.swift */; };
 		9C50028022A930F5008AE561 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C50027F22A930F5008AE561 /* ViewController.swift */; };
 		9C50028322A930F5008AE561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C50028122A930F5008AE561 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		40BAE7A922B9C82E0024D2B3 /* MarketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketViewController.xib; sourceTree = "<group>"; };
 		40BAE7AE22B9DC310024D2B3 /* MarketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTableViewCell.swift; sourceTree = "<group>"; };
 		40BAE7AF22B9DC310024D2B3 /* MarketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarketTableViewCell.xib; sourceTree = "<group>"; };
+		40BAE7B422BAB9C40024D2B3 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		40BAE7B822BABD760024D2B3 /* MarketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketController.swift; sourceTree = "<group>"; };
 		9C50027A22A930F5008AE561 /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C50027D22A930F5008AE561 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C50027F22A930F5008AE561 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,10 +133,27 @@
 			children = (
 				40BAE7A822B9C82E0024D2B3 /* MarketViewController.swift */,
 				40BAE7A922B9C82E0024D2B3 /* MarketViewController.xib */,
+				40BAE7B822BABD760024D2B3 /* MarketController.swift */,
 				40BAE7AE22B9DC310024D2B3 /* MarketTableViewCell.swift */,
 				40BAE7AF22B9DC310024D2B3 /* MarketTableViewCell.xib */,
 			);
 			path = MarketView;
+			sourceTree = "<group>";
+		};
+		40BAE7B222BAB9790024D2B3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				40BAE7B322BAB9AC0024D2B3 /* Model */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		40BAE7B322BAB9AC0024D2B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40BAE7B422BAB9C40024D2B3 /* Coin.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9C50027122A930F5008AE561 = {
@@ -158,6 +179,7 @@
 		9C50027C22A930F5008AE561 /* CryptoApp */ = {
 			isa = PBXGroup;
 			children = (
+				40BAE7B222BAB9790024D2B3 /* Common */,
 				40BAE79D22B9C5DE0024D2B3 /* TabBarViewController */,
 				9C50027D22A930F5008AE561 /* AppDelegate.swift */,
 				9C50027F22A930F5008AE561 /* ViewController.swift */,
@@ -329,7 +351,9 @@
 				40BAE79B22B9C5D10024D2B3 /* TabBarViewController.swift in Sources */,
 				9C50027E22A930F5008AE561 /* AppDelegate.swift in Sources */,
 				40BAE7AA22B9C82E0024D2B3 /* MarketViewController.swift in Sources */,
+				40BAE7B522BAB9C40024D2B3 /* Coin.swift in Sources */,
 				40BAE7A622B9C7C90024D2B3 /* WalletViewController.swift in Sources */,
+				40BAE7B922BABD760024D2B3 /* MarketController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
