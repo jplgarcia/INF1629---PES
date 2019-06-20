@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import SwiftChart
 
-class PredictionViewController: UIViewController {
+class PredictionViewController: UIViewController, ChartDelegate {
+
+    @IBOutlet weak var chart: Chart!
     
     init(coinName: String) {
         
@@ -28,8 +31,32 @@ class PredictionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.backgroundColor = UIColor.red
+        
+        chart.delegate = self
+        
+        let series = ChartSeries([0, 6, 2, 8, 4, 7, 3, 10, 8])
+        series.color = ChartColors.yellowColor()
+        series.area = true
+        chart.add(series)
+        
+    }
+    
+    func didTouchChart(_ chart: Chart, indexes: [Int?], x: Double, left: CGFloat) {
+        
+        for (seriesIndex, dataIndex) in indexes.enumerated() {
+            if dataIndex != nil {
+                // The series at `seriesIndex` is that which has been touched
+                let value = chart.valueForSeries(seriesIndex, atIndex: dataIndex)
+            }
+        }
+    }
+    
+    func didFinishTouchingChart(_ chart: Chart) {
+        
+    }
+    
+    func didEndTouchingChart(_ chart: Chart) {
+        
     }
 
 
