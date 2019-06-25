@@ -26,6 +26,7 @@ urllib3 = "*"
 Werkzeug = "*"
 XlsxWriter = "*"
 yarg = "*"
+simplejson= "*"
 
 [dev-packages]
 
