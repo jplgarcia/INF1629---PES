@@ -8,6 +8,11 @@ name = "pypi"
 gunicorn = "*"
 flask = "*"
 flask-cors = "*"
+pandas = "*"
+seaborn = "*"
+numpy = "*"
+matplotlib = "*"
+scipy = "*"
 
 
 [dev-packages]
